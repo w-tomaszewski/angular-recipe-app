@@ -1,0 +1,26 @@
+.recipe {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    .recipe-name {
+        line-height: 2;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .recipe-category {
+        max-width: 80%;
+    }
+
+    .recipe-area {
+        max-width: 80%;
+    }
+
+    .recipe-instructions {
+        max-width: 80%;
+    }
+}

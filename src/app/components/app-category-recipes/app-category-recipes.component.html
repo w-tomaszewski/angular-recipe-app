@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="category-recipes">
+<div
+  class="recipe"
+  *ngFor="let recipe of categoryRecipes$| async"
+  [routerLink]="['/recipe', { recipeId: recipe.id }]"
+  [skipLocationChange]="true"
+>
+  <p class="recipe-name" >{{ recipe.name }}</p>
+  <img [src]="recipe.image" />
+</div>
+</div>

@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="recipe" *ngIf="recipe !== null; else recipeNotFound">
+  <div class="recipe-name">
+    {{ recipe.name
+    }}<button (click)="handleFavoriteToogleClick()">
+      {{ recipe.isFavorite ? "Remove from favorites" : "Add to favorites" }}
+    </button>
+  </div>
+  <img [src]="recipe.image" />
+  <p class="recipe-category">Category: {{ recipe.category }}</p>
+  <p class="recipe-area">Area: {{ recipe.area }}</p>
+  <p class="recipe-instructions">Instructions: {{ recipe.instructions }}</p>
+</div>
+
+<ng-template #recipeNotFound>
+  <p>Error</p>
+</ng-template>

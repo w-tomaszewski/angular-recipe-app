@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="favorite-recipes">
+<div
+  class="recipe"
+  *ngFor="let recipe of recipeDataStorage.favoriteRecipes | keyvalue"
+  [routerLink]="['/recipe', { recipeId: recipe.value.id }]"
+  [skipLocationChange]="true"
+>
+  <p class="recipe-name" >{{ recipe.value.name }}</p>
+  <img [src]="recipe.value.image" />
+</div>
+</div>

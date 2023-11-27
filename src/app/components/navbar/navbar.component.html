@@ -1,0 +1,9 @@
+<div class="navbar">
+  <p class="logo">{{ pageTitle }}</p>
+  <div class="nav-links">
+    <a routerLink="/favorites" [skipLocationChange]="true">Favorites</a>
+    <a routerLink="/categories" [skipLocationChange]="true">Categories</a>
+    <a routerLink="/new-recipe" [skipLocationChange]="true">New Recipe</a>
+    <a *ngIf="recipeDataSourceService.previousUrls.length > 0" (click)="goBack()">Go Back</a>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="recipes.length">
+    <div class="category-recipes">
+      <div
+        class="recipe"
+        *ngFor="let recipe of recipes | filterRecords : currentLimit"
+        [routerLink]="['/recipe', { recipeId: recipe.id }]"
+        [skipLocationChange]="true"
+      >
+        <div class="recipe-content">
+          <div class="recipe-image">
+            <img [src]="recipe.image" alt="{{ recipe.name }} Image" />
+          </div>
+          <p class="recipe-name">{{ recipe.name }}</p>
+        </div>
+      </div>
+    </div>
+    <app-load-more-button
+      *ngIf="currentLimit < recipes.length"
+      (onClick)="handleAddMore()"
+    ></app-load-more-button>
+  </div>

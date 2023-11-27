@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+
+<app-recipe-list
+  *ngIf="categoryRecipes$ | async as categoryRecipes"
+  [recipes]="categoryRecipes"
+  [recipeLimit]="'8'"
+></app-recipe-list>

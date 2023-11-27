@@ -15,6 +15,7 @@ export class RecipesDataStorageService {
   recipeCategories: RecipeCategory[] = [];
   customRecipes: RecipeFull[] = [];
   recipeAreas: string[] = [];
+  previousUrls: string[] = [];
 
   constructor(private recipesHttpService: RecipesHttpService) { }
 
@@ -44,7 +45,7 @@ export class RecipesDataStorageService {
 
   getRecipe(recipeId: number): Observable<RecipeFull> {
     if (recipeId < 0) {
-      const customRecipe = this.customRecipes.find(recipe => recipe.id === (recipeId + 999));
+      const customRecipe = this.customRecipes.find(recipe => recipe.id === recipeId);
       if (!customRecipe) {
         return throwError(() => new Error("Cannot get recipe"));
       }

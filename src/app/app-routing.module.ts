@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppCategoriesComponent } from './components/app-categories/app-categories.component';
-import { AppFavoritesComponent } from './components/app-favorites/app-favorites.component';
-import { AppCategoryRecipesComponent } from './components/app-category-recipes/app-category-recipes.component';
-import { AppRecipeComponent } from './components/app-recipe/app-recipe.component';
-import { AppNewRecipeComponent } from './components/app-new-recipe/app-new-recipe.component';
+import { AppCategoriesComponent } from './components/categories/categories.component';
+import { AppFavoritesComponent } from './components/favorites/favorites.component';
+import { AppCategoryRecipesComponent } from './components/category-recipes/category-recipes.component';
+import { AppRecipeComponent } from './components/recipe/recipe.component';
+import { AppNewRecipeComponent } from './components/new-recipe/new-recipe.component';
 
 const routes: Routes = [
   {
